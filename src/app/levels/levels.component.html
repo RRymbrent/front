@@ -1,0 +1,44 @@
+<button (click)="goBack()" class="btn-secondary">
+  <i class="fas fa-circle-chevron-left"></i>
+</button>
+<div class="container">
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+    <div class="row mb-4">
+      <div class="col">
+        
+      </div>
+    </div>
+  
+    <h2 class="mb-4">Select a Scenario </h2>
+    <div class="row g-4">
+        <div class="col-md-4" *ngFor="let level of levels">
+          <button (click)="selectLevel(level.id)" 
+                  class="btn"
+                  [ngClass]="getButtonClass(level.id)">
+            {{ level.name }}
+          </button>
+        </div>
+      </div>
+  </div>
+  <div class="floating">
+    <div class="floating-left">
+      <div class="floating-box floating-l-left">L</div>
+      <div class="floating-box floating-b-left">B</div>
+      <div class="floating-box floating-k-left">K</div>
+      <div class="floating-box floating-bb-left">B</div>
+      <div class="floating-box floating-h-left">H</div>
+      <div class="floating-box floating-g-left">G</div>
+    </div>
+
+    <div class="floating-right">
+      <div class="floating-box floating-l-right">L</div>
+      <div class="floating-box floating-ll-right">L</div>
+      <div class="floating-box floating-d-right">D</div>
+      <div class="floating-box floating-f-right">F</div>
+      <div class="floating-box floating-o-right">O</div>
+      <div class="floating-box floating-k-right">K</div>
+    </div>
+  </div>
+  

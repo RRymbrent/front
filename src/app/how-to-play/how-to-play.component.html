@@ -1,0 +1,37 @@
+<div class="how-to-play-container">
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+
+    <button class="back-button" (click)="closePage()">
+      <i class="fas fa-circle-chevron-left"></i>
+    </button>
+    <h1 class="title">How to Play?</h1>
+    <div class="steps">
+      <div class="step step-1">
+        <h2>STEP #1</h2>
+        <br>
+        <p>Select a mode between Best Response Dynamics questions and Review Flip Cards.</p>
+      </div>
+      <div class="step step-2">
+        <h2>STEP #2</h2>
+        <br>
+        <p>If you selected Best Response Dynamics, choose which category would you like to play then choose which number of scenario would you like to answer.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>If you selected Review Flip Cards: You can start learning by clicking the cards.</p>
+      </div>
+      <div class="step step-3">
+        <h2>STEP #3</h2>
+        <br>
+        <p>If you selected Best Response Dynamics: Answer the questions by identifying what the best response to that scenario.</p>
+        <br>
+        <br>
+        <p>If you selected Review Flip Cards: Now you can read and be familiar with the Kapampangan words that you still don't know.</p>
+      </div>
+    </div>
+    <button class="play-button"(click)="playPage()">Play</button>
+  </div>
+  

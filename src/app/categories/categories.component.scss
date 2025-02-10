@@ -1,0 +1,354 @@
+.category-container {
+  font-family: 'Passion One', sans-serif;
+  text-align: center;
+  color: #BB3E03;
+  height: 105vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFE2AD;
+  overflow-x: hidden;
+  
+}
+
+.letters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-auto-rows: 1fr; 
+  justify-items: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0.2;
+  font-size: 100px; 
+  font-weight: 900px;
+  font-family: 'Itim', cursive; 
+  color: rgb(0, 18, 25);
+  z-index: 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #BB3E03;
+  font-family: 'Passion One', sans-serif;
+  font-size: 70px;
+  cursor: pointer;
+  border-radius: 15px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.30);
+}
+
+.button-clear {
+  position: relative;
+  top: 50px;
+  left: 750px;
+  width: 120px;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: #AE2012;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Passion One', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.button-clear:hover {
+  transform: scale(1.30);
+}
+
+.title {
+  text-align: center;
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  color: #BB3E03;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  z-index: 5;
+  position: relative;
+  background-color: transparent;
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 900;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
+  background-color: transparent;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 310px;
+  height: 450px;
+  background: rgba(174, 32, 18, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 3;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  justify-content: space-between;
+}
+
+.category:hover {
+  border-radius: 10px;
+  background: black;
+  transform: scale(1.05);
+}
+
+.image-title {
+  background-color: transparent;
+  color: white;
+  font-size: 36px;
+  font-family: 'Lilita One';
+  text-align: center;
+  margin-top: 30px;
+  line-height: 1.2;
+  word-break: break-word;
+  max-width: 275px;
+}
+
+.category-image {
+  width: 275px;
+  height: 212px;
+  background-size: cover;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.at-home { background-image: url('images-category/home.png'); }
+.at-school { background-image: url('images-category/school.png'); }
+.in-a-public-place { background-image: url('images-category/public.png'); }
+.conversation-with-elders { background-image: url('images-category/elders.png'); }
+.workplace { background-image: url('images-category/workplace.png'); }
+
+.progress-container {
+  width: 100%;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 25px;
+  background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+  border-radius: 20px;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.progress-text {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 25px;
+}
+
+.progress-text.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .category-container {
+    height: auto;
+    padding: 60px 20px;
+    width: 90vh
+  }
+  .letters{
+    visibility: hidden;
+  }
+  .back-button {
+    top: 20px;
+    left: 20px;
+    width: auto;
+    height: auto;
+    font-size: 60px;
+  }
+
+  .button-clear {
+    position: absolute;
+    top: 40px;
+    left: auto;
+    right: -170px;
+    width: auto;
+  }
+
+  .title {
+    font-size: 25px;
+    line-height: 1.5;
+    margin-top: 30px;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category {
+    width: 100%;
+    max-width: 310px; /* Ensure max width */
+    height: auto;
+    min-height: 400px;
+    padding: 15px;
+  }
+
+  .category-image {
+    width: 100%;
+    max-width: 275px;
+    height: auto;
+    aspect-ratio: 275/212;
+  }
+
+  .image-title {
+    font-size: 28px;
+  }
+
+  .progress-container {
+    width: 100%;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    height: 20px; 
+  }
+
+  .progress-text {
+    font-size: 12px; 
+  }
+}
+
+.image-title {
+  font-size: 24px; 
+  padding: 10px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); 
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .category-container {
+    height: auto;
+    padding: 80px 30px;
+    
+  }
+
+  .back-button {
+    top: 30px;
+    left: 30px;
+    font-size: 60px;
+  }
+
+  .button-clear {
+    position: absolute;
+    top: 30px;
+    left: auto;
+    right: 30px;
+  }
+
+  .title {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+
+  .categories {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .category {
+    width: 280px;
+    height: 420px;
+  }
+
+  .category-image {
+    width: 250px;
+    height: 192px;
+  }
+
+  .image-title {
+    font-size: 32px;
+    max-width: 250px;
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .categories {
+    gap: 40px;
+  }
+
+  .category {
+    width: 300px;
+    height: 440px;
+  }
+
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .category-container {
+    height: 145vh;
+  }
+  .button-clear{
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .category-container {
+    height: auto !important;
+  }
+}

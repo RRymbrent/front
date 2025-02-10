@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  font-family: 'Palanquin Dark', sans-serif;
+  z-index: 2;
+  background: #FFE2AD;
+}
+
+.letters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-auto-rows: 1fr; 
+  justify-items: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0.2;
+  font-size: 100px; 
+  font-weight: 900px;
+  font-family: 'Itim', cursive; 
+  color: rgb(0, 18, 25);
+  z-index: 0;
+}
+
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 50px;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFFAFB;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 3;
+  overflow-x: hidden;
+}
+
+
+
+h2 {
+  width: 100%;
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120px;
+  text-align: center;
+  color: #FFFAFB;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+}
+
+
+p {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Palanquin Dark', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFAFB;
+  margin: 0;
+  background-color: transparent;
+}
+
+
+h3 {
+  width: 100%;
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFAFB;
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.25);
+  margin: 0;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+li {
+  font-family: 'Oxygen Mono', monospace;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFAFB;
+  margin: 3px 0;
+  background-color: transparent;
+  padding: 6px;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #FFFAFB;
+  font-size: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.30);
+}
+
+
+@media (max-width: 768px) {
+  .content-container {
+    width: 85%;
+    height: 70%;
+    gap: 30px; 
+    margin-right: 50px;
+  }
+
+  h2 {
+    font-size: 36px; 
+    line-height: 100px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  h3 {
+    font-size: 28px; 
+  }
+
+  li {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    width: 95%;
+    height: 80%;
+    margin-left: 40px;
+        margin-top: 40px;
+  }
+  .letters{
+    visibility: hidden;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 80px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  li {
+    font-size: 18px; 
+  }
+
+  .close-button {
+    font-size: 26px; 
+  
+  }
+
+  
+  
+}
+
+@media (max-width: 320px) {
+  .content-container {
+    width: 100%;
+    height: 75%;
+    margin-left: 40px;
+        margin-top: 40px;
+  }
+  .letters{
+    visibility: hidden;
+  }
+
+  h2 {
+    font-size: 28px; 
+    line-height: 80px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  h3 {
+    font-size: 24px; 
+  }
+
+  li {
+    font-size: 18px; 
+  }
+
+  .close-button {
+    font-size: 30px; 
+  
+  }
+  .about-page{
+    width: 55vh;
+  }
+  
+  
+}

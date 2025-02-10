@@ -1,0 +1,31 @@
+<div class="quiz-container">
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+  <button class="back-button" (click)="goBack()">
+    <i class="fas fa-circle-chevron-left"></i>
+  </button>
+  
+  <h1 class="category-title">Category: {{ categoryName }}</h1>
+  <h2 class="question-title">{{ levelName }}</h2>
+
+  <div *ngIf="questions.length > 0">
+    <p class="question-text">
+      {{ questions[currentQuestionIndex].question_text }}
+    </p>
+    <div class="answer-options">
+      <button
+        *ngFor="let answer of questions[currentQuestionIndex].answers"
+        (click)="selectAnswer(answer.id)"
+        class="answer-button"
+        [class.correct]="showFeedback && answer.is_correct && isCorrect"
+        [class.incorrect]="showFeedback && !answer.is_correct && selectedAnswer === answer.id"
+        [disabled]="showFeedback">
+        {{ answer.answer_text }}
+      </button>
+    </div>
+  </div>
+  
+
+  <div *ngIf="error" class="alert">{{ error }}</div>
+</div>

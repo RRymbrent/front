@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+:host {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #FFE2AD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.letters {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-auto-rows: 1fr; 
+  justify-items: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0.2;
+  font-size: 100px; 
+  font-weight: 900px;
+  font-family: 'Itim', cursive; 
+  color: rgb(0, 18, 25);
+  z-index: 0;
+}
+
+.title-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Indie Flower';
+  font-size: 13vw;
+  color: #BB3E03;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.button-play-button,
+.button-about-button,
+.button-how-to-play-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  margin: 1rem;
+  background: #AE2012;
+  border-radius: 10px;
+  font-family: 'Itim', cursive;
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-play-button:hover,
+.button-about-button:hover,
+.button-how-to-play-button:hover {
+  transform: scale(1.05);
+  background-color: #9C1E10;
+}
+
+.floating-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(40px, 10vw, 81px);
+  height: clamp(40px, 10vw, 82px);
+  border-radius: 16px;
+  font-family: 'Itim', cursive;
+  font-size: clamp(20px, 5vw, 50px);
+  font-weight: 900;
+  color: #FFFFFF;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+.floating-l,
+.floating-b,
+.floating-h,
+.floating-g,
+.floating-d,
+.floating-o,
+.floating-f,
+.floating-k {
+  transform-origin: center;
+}
+
+
+.floating-l-left { top: 125.68px; left: 97.66px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-b-left { top: 225px; left: 272.61px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-k-left { top: 288px; left: 25.62px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-bb-left { top: 407.12px; left: 169.18px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-h-left { top: 514px; left: -2.94px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-g-left { top: 586.23px; left: 204px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+
+
+.floating-l-right { top: 159px; left: 1739.61px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-ll-right { top: 335.26px; left: 1601px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-d-right { top: 300.01px; left: 1823px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-f-right { top: 500.01px; left: 1724px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-o-right { top: 600px; left: 1631.33px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-k-right { top: 650px; left: 1850px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+
+
+@media (min-width: 1440px) and (max-width: 1700px) {
+  .title-container {
+    font-size: 15vw;
+    margin-bottom: 1.5rem;
+  }
+
+  .button-play-button,
+  .button-about-button,
+  .button-how-to-play-button {
+    font-size: 1rem;
+    max-width: 200px;
+  }
+  .floating-box {
+    width: 6vw;
+    height:6vw;
+    font-size: 2rem;
+
+  }
+  .floating-l-right { top: 159px; left: 1300.61px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-ll-right { top: 335.26px; left: 1201px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-d-right { top: 300.01px; left: 1350px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-f-right { top: 500.01px; left: 1270px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-o-right { top: 600px; left: 1390.33px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-k-right { top: 650px; left: 1180px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1150px){
+  .floating-l-right { top: 159px; left: 890.61px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-ll-right { top: 335.26px; left: 800px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-d-right { top: 250.01px; left: 1000px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-f-right { top: 500.01px; left: 1000px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-o-right { top: 500px; left: 850px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-k-right { top: 650px; left: 780px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+
+}
+
+@media (min-width: 1151px) and (max-width: 1439px){
+  .floating-l-right { top: 159px; left: 1190.61px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-ll-right { top: 335.26px; left: 1000px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-d-right { top: 250.01px; left: 1300px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-f-right { top: 500.01px; left: 1250px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-o-right { top: 500px; left: 1050px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+.floating-k-right { top: 650px; left: 1250px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .title-container {
+    font-size: 25vw;
+    margin-bottom: 1.5rem;
+  }
+  .button-container {
+    gap: 0.75rem;
+  }
+  .button-play-button,
+  .button-about-button,
+  .button-how-to-play-button {
+    font-size: 1rem;
+    max-width: 200px;
+  }
+  .floating-box {
+    width: 8vw;
+    height: 8vw;
+    font-size: 1rem;
+  }
+  .floating-l-left { top: 125.68px; left: 97.66px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-k-left { top: 288px; left: 25.62px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-b-left{top: 150px}
+  .floating-bb-left { top: 407.12px; left: 169.18px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-h-left { top: 514px; left: -2.94px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-g-left { top: 586.23px; left: 204px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+
+  .letters{
+    font-size: 50px;
+  }
+  
+  .floating-l-right { top: 159px; left: 600px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-ll-right { top: 395.26px; left: 620px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-d-right { top: 300.01px; left: 590px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+  .floating-f-right { top: 500.01px; left: 570px; transform: rotate(-22.56deg); background-color: #BB3E03; }
+}
+
+@media (max-width: 480px) {
+  .title-container {
+    font-size: 35vw;
+    margin-bottom: 1.2rem;
+
+  }
+  .button-play-button,
+  .button-about-button,
+  .button-how-to-play-button {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    max-width: 180px;
+  }
+  .floating-box {
+    width: 12vw;
+    height: 12vw;
+    font-size: 0.8rem;
+  }
+  .floating-b-left{
+    top:150px;
+  }
+  .floating-bb-left{
+    left: 350px;
+  }
+  .floating-k-left{
+    top:340px;
+  }
+  .floating-g-left{
+    left:400px
+  }
+}
+
+::ng-deep .swal-custom-title {
+  font-size: 50px !important;
+  font-weight: bold;
+  color: #BB3E03; 
+}
+
+::ng-deep .swal-custom-text {
+  font-size: 20px !important;
+
+}

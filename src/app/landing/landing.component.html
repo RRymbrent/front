@@ -1,0 +1,38 @@
+<body style="background-color: #FFE2AD;">
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+
+    <div class="main-container">
+  
+      <div class="title-container">
+        <span class="white">I</span><span class="green">kv</span><span class="white">wa</span>
+      </div>
+        
+      <div class="button-container">
+        <div class="button-play-button" (click)="goToPlay()">PLAY</div>
+        <div class="button-about-button" (click)="goToAbout()">ABOUT</div>
+        <div class="button-how-to-play-button" (click)="goTohow()">HOW TO PLAY</div>
+      </div>
+    
+      <div class="floating">
+        <div class="floating-left">
+          <div class="floating-box floating-l-left">L</div>
+          <div class="floating-box floating-b-left">J</div>
+          <div class="floating-box floating-k-left">F</div>
+          <div class="floating-box floating-bb-left">E</div>
+          <div class="floating-box floating-h-left">G</div>
+          <div class="floating-box floating-g-left">L</div>
+        </div>
+
+        <div class="floating-right">
+          <div class="floating-box floating-l-right">R</div>
+          <div class="floating-box floating-ll-right">R</div>
+          <div class="floating-box floating-d-right">M</div>
+          <div class="floating-box floating-f-right">J</div>
+          <div class="floating-box floating-o-right">E</div>
+          <div class="floating-box floating-k-right">M</div>
+        </div>
+      </div>      
+    </div>
+  </body>

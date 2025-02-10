@@ -1,0 +1,46 @@
+
+<div class="page-container">
+  <button class="back-button" (click)="backPage()">
+    <i class="fas fa-circle-chevron-left"></i>
+  </button>
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+  
+  <h1 class="title">FLIP CARDS</h1>
+  <button class="unflip-button" (click)="unflipAll()">Unflip All</button>
+
+  <div class="card-grid">
+    <div
+      class="card"
+      *ngFor="let card of paginatedCards; let i = index"
+      (click)="onCardClick(i)"
+    >
+      <div class="card-inner" [class.flipped]="flippedCards[i + currentPage * itemsPerPage]">
+        <!-- Front of the card -->
+        <div class="card-front">
+          {{ card.question }}
+        </div>
+        <!-- Back of the card -->
+        <div class="card-back">
+          {{ card.answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination Buttons -->
+  <div class="pagination">
+    <button (click)="previousPage()" [disabled]="currentPage === 0">
+      <i class="fas fa-chevron-left"></i> <!-- Font Awesome left arrow -->
+    </button>
+    <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages - 1">
+      <i class="fas fa-chevron-right"></i> <!-- Font Awesome right arrow -->
+    </button>
+  </div>
+  
+  
+
+  <div class="background"></div>
+</div>

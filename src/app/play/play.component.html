@@ -1,0 +1,42 @@
+<button class="back-button" (click)="closePage()">
+  <i class="fas fa-circle-chevron-left"></i> 
+</button>
+<div class="select-mode-container">
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+    
+    
+    <div class="title" *ngIf="!isMobile">SELECT A MODE</div>
+    
+    <div class="modes">
+      <!-- Best Response Section -->
+      <div class="mode">
+        <h2>SELECT A CATEGORY</h2>
+        <h3>BEST RESPONSE</h3>
+        <div class="options">
+          <button class="level-button">1</button>
+          <button class="level-button">2</button>
+          <button class="level-button">3</button>
+          <button class="level-button">4</button>
+          <button class="level-button">5</button>
+        </div>
+        <button class="play-button"(click)="categoryPage()">
+          <span class="play-icon" (click)="categoryPage()">▶</span>
+        </button>
+      </div>
+      
+      <!-- Semantics Flip Cards Section -->
+      <div class="mode">
+        <h2>Review: FLIP CARDS</h2>
+        <div class="flip-cards">
+          <!-- Example grid of cards -->
+          <div class="card" *ngFor="let card of cards">?</div>
+        </div>
+        <button class="play-button" (click)="playFlipcards()">
+          <span class="play-icon" (click)="playFlipcards()">▶</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  

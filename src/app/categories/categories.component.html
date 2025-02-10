@@ -1,0 +1,27 @@
+<div class="category-container">
+  <div class="letters">
+    <span *ngFor="let letter of letters">{{ letter }}</span>
+  </div>
+  <button class="back-button" (click)="goToPlay()">
+    <i class="fas fa-circle-chevron-left"></i> 
+  </button>
+  
+  <h2 class="title">SELECT A CATEGORY</h2>
+  <p class="subtitle">Best Response</p>
+
+  <div class="categories">
+    <div *ngFor="let category of categories" class="category" (click)="goToLevels(category.id)">
+      <div class="category-image" [ngClass]="getCategoryClass(category.name)"></div>
+      <span class="image-title">{{ category.name }}</span>
+      <div class="progress-container">
+  <div class="progress-bar" [style.width]="getScorePercentage(category.id) + '%'">
+    <span class="progress-text" [class.center]="getScorePercentage(category.id) === 0">
+      {{ getScorePercentage(category.id) }}%
+    </span>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="button-clear" (click)="clearLocalStorage()">Clear <i class="fa-solid fa-trash-can-arrow-up"></i></div>
+</div>
