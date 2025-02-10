@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+  build:
+    commands:
+      - echo "Building the Angular app..."
+      - ng build --configuration=production
+  post_build:
+    commands:
+      - echo "Build complete. Deploying to S3..."
+      - aws s3 sync dist/front s3://thesis-front-end --delete
+
+artifacts:
+  files:
+    - '**/*'
